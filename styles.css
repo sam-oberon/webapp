@@ -1,10 +1,11 @@
 header {
-    background-color: #3498db;
+    background-color: #cc502a;
     color: #fff;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: LinotypeSyntaxSerifW01;
 }
 .header-content {
     flex: 1;
@@ -47,7 +48,7 @@ section {
 }
 section h3 {
     margin-top: 0;
-    color: #3498db;
+    color: #cc502a;
 }
 table {
     width: 100%;
@@ -62,15 +63,13 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #3498db;
+    background-color: #cc502a;
     color: #fff;
 }
-footer {
-    background-color: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+
+
+
+.svg1 {
+
+    fill: #ffffffdd;
 }
