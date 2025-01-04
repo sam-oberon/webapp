@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif, bold;
+    background-color: #1c1c28;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Línea inferior */
+}
+
+.logo h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    left: 0%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 1.5px 1.5px #0000007d;
+}
+
+.menu a:hover {
+    color: #83eaff;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Add Decorative Lines */
+.hero::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Línea semitransparente */
+    z-index: 1;
+}
+
+/* Línea vertical */
+.hero::before {
+    width: 2px;
+    height: 100%;
+    left: 80px;
+    top: 0;
+}
+
+/* Línea horizontal */
+.hero::after {
+    height: 2px;
+    width: 100%;
+    left: 0;
+    top: 100px;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    max-width: 600px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2; /* Asegura que el texto esté encima de las líneas */
+}
+
+.hero-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.logo h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+/* First stripe */
+.hamburger-menu span:first-child {
+    top: 0;
+}
+
+/* Second stripe */
+.hamburger-menu span:last-child {
+    bottom: 0;
+}
+
+/* Animation for open state */
+.hamburger-menu.open span:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.open span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Menu Dropdown */
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%; /* El menú comienza fuera de la pantalla desde la derecha */
+    width: 30%; /* El menú ocupa el 60% del ancho de la pantalla */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.54);
+    z-index: 15;
+    padding: 30px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Animación para el deslizamiento */
+}
+
+.menu-dropdown.open {
+    display: block;
+    right: 0; /* El menú se despliega al llegar a la pantalla */
+}
+
+.menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 80px;
+}
+
+.menu-dropdown li {
+    margin-bottom: 25px;
+    text-align: right; /* Alineamos el texto a la derecha para una mejor apariencia */
+}
+
+.menu-dropdown a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+    color: #6bbfd0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+.fantasy-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border-top: 2px solid #444;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+  position: relative;
+}
+
+.footer-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px; /* Ancho de la raya separadora */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.614); /* Color semitransparente */
+  }
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #6bbfd0; /* Verde fantástico */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 1%;
+  font-size: 10px; 
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #6bbfd0; /* Cambia a verde al pasar el mouse */
+}
+
+.brand-book-button {
+    display: inline-block;
+    padding: 12px 18px;
+    margin-top: 10px;
+    color: #000;
+    background-color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ffffff; /* Reborde blanco */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .brand-book-button:hover {
+    background-color: #ffffff; /* Fondo blanco al pasar el mouse */
+    color: #000; /* Texto negro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevar el botón */
+  }
+  
+
+.brand-book-button:hover {
+  background-color: #6bbfd0;
+  transform: translateY(-2px);
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
