@@ -7,9 +7,9 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif, bold;
-    background-color: #1c1c28;
-    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
 }
 
 /* Header */
@@ -17,16 +17,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding-left: 17px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: fixed;
     width: 100%;
     z-index: 10;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Línea inferior */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.189); /* Línea inferior */
+    background-color: #0000001c;
 }
 
 .logo h1 {
-    font-size: 24px;
-    letter-spacing: 2px;
+    margin-top: 3px;
     left: 0%;
 }
 
@@ -49,8 +52,9 @@ header {
 }
 
 .menu a:hover {
-    color: #83eaff;
+    color: #ffe946;
 }
+
 
 .hamburger-menu {
     display: none;
@@ -82,13 +86,92 @@ header {
     left: 0;
     z-index: -1;
 }
+  
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 59%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    height: 350px;
+    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-right: 140px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card {
+    min-width: 250px;
+    max-width: 250px;
+    height: 300px;
+    background-color: #000000;
+    padding: 0; /* Eliminar el padding para que la imagen ocupe toda la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Importante para que el texto se posicione sobre la tarjeta */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    transform: scale(0.8);
+    opacity: 0.6;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card img {
+    width: 100%;  /* La imagen ocupará todo el ancho de la tarjeta */
+    height: 100%; /* La imagen ocupará todo el alto de la tarjeta */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    border-radius: 10px;
+    position: absolute; /* La imagen estará completamente por debajo del texto */
+    top: 0;
+    left: 0;
+}
+
+.card p {
+    position: absolute; /* Posicionar el texto por encima de la imagen */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar exacto */
+    color: white; /* Color de texto para que sea visible sobre la imagen */
+    font-size: 19px;
+    text-align: center;
+    z-index: 2; /* Asegura que el texto esté encima de la imagen */
+    font-weight: bold;
+}
+
+.card.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card.prev, .card.next {
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
 
 /* Add Decorative Lines */
 .hero::before {
     content: '';
-    position: absolute;
-    background: rgba(255, 255, 255, 0.2); /* Línea semitransparente */
-    z-index: 1;
+    position: fixed; /* Cambiar de absolute a fixed para que esté fijo en la pantalla */
+    background: rgba(255, 255, 255, 0.300); /* Línea semitransparente */
+    z-index: 999; /* Asegura que esté por encima de cualquier otro elemento */
+    width: 100vw; /* Asegura que la línea cubra todo el ancho de la ventana */
+    height: 100vh; /* Asegura que la línea cubra toda la altura de la ventana */
+    top: 0;
+    left: 0;
 }
 
 /* Línea vertical */
@@ -178,7 +261,7 @@ header {
     position: fixed;
     top: 0;
     right: -100%; /* El menú comienza fuera de la pantalla desde la derecha */
-    width: 30%; /* El menú ocupa el 60% del ancho de la pantalla */
+    width: 20%; /* El menú ocupa el 60% del ancho de la pantalla */
     height: 100%;
     background: rgba(0, 0, 0, 0.54);
     z-index: 15;
@@ -205,7 +288,7 @@ header {
 }
 
 .menu-dropdown a {
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
@@ -232,12 +315,15 @@ header {
   padding: 40px 20px;
   background: linear-gradient(135deg, #1a1a1a, #000);
   border-top: 2px solid #444;
+  z-index: 10000;
+  position: relative;
 }
 
 .footer-section {
   flex: 1 1 200px;
   margin: 10px;
   position: relative;
+  z-index: 10000;
 }
 
 .footer-section:not(:last-child)::after {
@@ -316,4 +402,33 @@ header {
 
 .footer-section a:hover {
   text-decoration: underline;
+}
+
+/* Línea horizontal blanca al principio de la sección */
+.section-divider-horizontal-start {
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0px; /* Espaciado para separar de los elementos siguientes */
+    width: 1436px; /* Asegura que la línea cubra todo el ancho */
+    position: relative;
+    left: 82px;
+}
+
+
+/* Línea vertical entre el h1 y el p */
+.section-divider-vertical {
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+    height: 150px;
+    position: relative;
+}
+
+/* Línea horizontal entre el carousel y el contenido anterior */
+.section-divider-horizontal {
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    width: 1436px;
+    position: relative;
+    top: 0px;
+    left: 82px
 }
