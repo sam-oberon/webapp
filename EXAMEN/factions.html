@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factions</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="factions-styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1><img src="archivos/LOGONOTA.png" width="40px"></h1>
-        </div>
+            <h1><a href="index.html"><img src="archivos/LOGONOTA.png" width="40px" alt="Logo"></a></h1>
+        </div>        
         <nav>
             <ul class="menu">
                 <li><a href="project.html">PROJECT</a></li>
                 <li><a href="factions.html">FACTIONS</a></li>
                 <li><a href="book.html">BOOK</a></li>
-                <li><a href="world.html">THE WORLD</a></li>
+                <li><a href="world.html">WORLD</a></li>
             </ul>
         </nav>
         <div class="hamburger-menu">
@@ -36,68 +36,112 @@
 
     <main>
         <section class="hero">
-            <img src="archivos/FACTIONS_BG.jpeg" alt="Factions Background">
+            <img src="archivos/FONDO-FACTIONS.jpeg" alt="Background Image">
             <div class="hero-text">
-                <h2>FACTIONS</h2>
-                <p>Meet the forces shaping this universe: their beliefs, their battles, and their quest for power.</p>
+                <h2>WHERE SHOULD WE GO?</h2>
+                <p>None like the other, the different factions or regions of this world define and visually embody a very specific genre of sounds and history, each one standing out for its unique cultures, architecture, society...</p>
             </div>
         </section>
 
-        <section class="content">
-            <div class="section-divider-horizontal"></div>
-            <h1>THE FACTIONS</h1>
-            <p>In the world of this project, factions are the cornerstone of power and conflict. Each faction embodies unique ideologies, strengths, and ambitions.</p>
-            <div class="section-divider-horizontal"></div>
-            <div class="faction-list">
-                <div class="faction-item">
-                    <h2>1. The Vanguard</h2>
-                    <p>A disciplined group focused on justice and order, fighting to uphold a crumbling civilization.</p>
+        <section class="artist-section">
+            <!-- Línea horizontal -->
+            <hr class="horizontal-line">
+        
+            <!-- Texto principal centrado -->
+            <div class="text-center">
+                <h2 class="section-title">EXPLORE THE DIFFERENT FACTIONS</h2>
+            </div>
+        
+            <!-- Línea horizontal -->
+            <hr class="horizontal-line">
+
+            <!-- Contenedor de imágenes -->
+            <div class="image-grid">
+                <!-- Primera fila -->
+                <div class="image-card" style="background-image: url('archivos/FONDO1.jpeg');">
+                    <span class="image-title">ROCK-PUNK</span>
                 </div>
-                <div class="faction-item">
-                    <h2>2. The Shadow Syndicate</h2>
-                    <p>Masters of espionage and intrigue, manipulating the shadows to achieve their goals.</p>
+                <div class="image-card" style="background-image: url('archivos/FONDO2.jpg');">
+                    <span class="image-title">CLASSICAL</span>
                 </div>
-                <div class="faction-item">
-                    <h2>3. The Wildborn</h2>
-                    <p>Defenders of nature, channeling primal forces to protect their ancient lands.</p>
+                <div class="image-card" style="background-image: url('archivos/FONDO3.jpg');">
+                    <span class="image-title">JAZZ</span>
+                </div>
+        
+
+                <!-- Segunda fila -->
+                <div class="image-card" style="background-image: url('archivos/FONDO4.jpg');">
+                    <span class="image-title">POP</span>
+                </div>
+                <div class="image-card" style="background-image: url('archivos/FONDO5.jpeg');">
+                    <span class="image-title">TECHNO</span>
+                </div>
+                <div class="image-card" style="background-image: url('archivos/FONDO6.jpeg');">
+                    <span class="image-title">MAPS</span>
                 </div>
             </div>
         </section>
+        
+        
+        
     </main>
 
-    <footer class="fantasy-footer">
-        <div class="footer-section">
-            <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
-            <ul>
-                <li>FACTION_OVERVIEW_023123.TXT</li>
-                <li>FACTION_LOGOS_004.JPG</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>DISCOVER MORE</h3>
-            <ul>
-                <li><a href="#">STORY</a></li>
-                <li><a href="#">JOURNAL</a></li>
-                <li><a href="#">MEDIA</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CAREERS ↗</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>JOIN THE CONVERSATION</h3>
-            <ul>
-                <li><a href="#">TWITTER</a></li>
-                <li><a href="#">DISCORD</a></li>
-                <li><a href="#">REDDIT</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>MORE DETAILS</h3>
-            <p>CONTACT US AT <a href="mailto:samsotoo238@gmail.com">samsotoo238@gmail.com</a></p>
-        </div>
-    </footer>
+    <script>
+// Seleccionamos los elementos necesarios
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menuDropdown = document.querySelector('.menu-dropdown');
 
-    <script src="scripts.js"></script>
+// Abrir y cerrar el menú al hacer clic en el icono de la hamburguesa
+hamburgerMenu.addEventListener('click', (e) => {
+    e.stopPropagation();  // Evita que el clic se propague y cierre el menú
+    hamburgerMenu.classList.toggle('open');
+    menuDropdown.classList.toggle('open');
+});
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', (e) => {
+    // Verificamos si el clic no fue sobre el menú ni sobre el botón de hamburguesa
+    if (!menuDropdown.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+        menuDropdown.classList.remove('open');
+        hamburgerMenu.classList.remove('open');
+    }
+});
+
+    </script>
+
+<footer class="fantasy-footer">
+    <div class="footer-section">
+      <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
+      <ul>
+        <li>KAI_53815.JPG</li>
+        <li>AUDIO_LOG_2018116.WAV</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>DISCOVER MORE</h3>
+      <ul>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">JOURNAL</a></li>
+        <li><a href="#">MEDIA</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CAREERS ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>JOIN THE CONVERSATION</h3>
+      <ul>
+        <li><a href="#">TWITTER</a></li>
+        <li><a href="#">DISCORD</a></li>
+        <li><a href="#">REDDIT</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>MORE DETAILS</h3>
+      <p>CONTACT US AT <a href="mailto:samsotoo238@gmail.com">harmony@gmail.com</a></p>
+      <a href="#" class="brand-book-button">DOWNLOAD BOOK</a>
+    </div>
+  </footer>
+  
 </body>
 </html>

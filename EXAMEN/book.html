@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="book-styles.css">
+    <script src="scripts-book.js"></script>
+
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1><img src="archivos/LOGONOTA.png" width="40px"></h1>
-        </div>
+            <h1><a href="index.html"><img src="archivos/LOGONOTA.png" width="40px" alt="Logo"></a></h1>
+        </div>        
         <nav>
             <ul class="menu">
                 <li><a href="project.html">PROJECT</a></li>
                 <li><a href="factions.html">FACTIONS</a></li>
                 <li><a href="book.html">BOOK</a></li>
-                <li><a href="world.html">THE WORLD</a></li>
+                <li><a href="world.html">WORLD</a></li>
             </ul>
         </nav>
         <div class="hamburger-menu">
@@ -36,58 +38,85 @@
 
     <main>
         <section class="hero">
-            <img src="archivos/BOOK_BG.jpeg" alt="Book Background">
+            <img src="archivos/FONDO-BOOK.jpg" alt="Background Image">
             <div class="hero-text">
-                <h2>THE BOOK</h2>
-                <p>Dive into the lore of this world. Discover its secrets, history, and the tales that shaped its existence.</p>
+                <h2>DISCOVER HARMONY</h2>
+                <p>A book that knows no limits or boundries. Explore here some of the early pages.</p>
             </div>
         </section>
 
-        <section class="content">
-            <div class="section-divider-horizontal"></div>
-            <h1>DISCOVER THE LEGENDS</h1>
-            <p>Explore the pages filled with tales of bravery, betrayal, and triumph. Every chapter unveils a new mystery, waiting to be uncovered.</p>
-            <div class="section-divider-horizontal"></div>
-            <div class="book-preview">
-                <img src="archivos/BOOK_PREVIEW.jpg" alt="Book Preview">
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <button class="carousel-btn left-btn" onclick="prevSlide()">&#9664;</button>
+                <div class="carousel-slide">
+                    <img src="archivos/PÁGINA1.png" alt="Imagen 1" class="carousel-image">
+                    <img src="archivos/PÁGINA2.png" alt="Imagen 2" class="carousel-image">
+                    <img src="archivos/PÁGINA3.png" alt="Imagen 3" class="carousel-image">
+                    <img src="archivos/PÁGINA4.png" alt="Imagen 4" class="carousel-image">
+                </div>
+                <button class="carousel-btn right-btn" onclick="nextSlide()">&#9654;</button>
             </div>
-        </section>
+        </section>           
     </main>
 
-    <footer class="fantasy-footer">
-        <div class="footer-section">
-            <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
-            <ul>
-                <li>KAI_53815.JPG</li>
-                <li>AUDIO_LOG_2018116.WAV</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>DISCOVER MORE</h3>
-            <ul>
-                <li><a href="#">STORY</a></li>
-                <li><a href="#">JOURNAL</a></li>
-                <li><a href="#">MEDIA</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CAREERS ↗</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>JOIN THE CONVERSATION</h3>
-            <ul>
-                <li><a href="#">TWITTER</a></li>
-                <li><a href="#">DISCORD</a></li>
-                <li><a href="#">REDDIT</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>MORE DETAILS</h3>
-            <p>CONTACT US AT <a href="mailto:samsotoo238@gmail.com">samsotoo238@gmail.com</a></p>
-            <a href="#" class="brand-book-button">DOWNLOAD BOOK</a>
-        </div>
-    </footer>
 
-    <script src="scripts.js"></script>
+    
+    <script>
+// Seleccionamos los elementos necesarios
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menuDropdown = document.querySelector('.menu-dropdown');
+
+// Abrir y cerrar el menú al hacer clic en el icono de la hamburguesa
+hamburgerMenu.addEventListener('click', (e) => {
+    e.stopPropagation();  // Evita que el clic se propague y cierre el menú
+    hamburgerMenu.classList.toggle('open');
+    menuDropdown.classList.toggle('open');
+});
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', (e) => {
+    // Verificamos si el clic no fue sobre el menú ni sobre el botón de hamburguesa
+    if (!menuDropdown.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+        menuDropdown.classList.remove('open');
+        hamburgerMenu.classList.remove('open');
+    }
+});
+
+    </script>
+
+<footer class="fantasy-footer">
+    <div class="footer-section">
+      <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
+      <ul>
+        <li>KAI_53815.JPG</li>
+        <li>AUDIO_LOG_2018116.WAV</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>DISCOVER MORE</h3>
+      <ul>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">JOURNAL</a></li>
+        <li><a href="#">MEDIA</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CAREERS ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>JOIN THE CONVERSATION</h3>
+      <ul>
+        <li><a href="#">TWITTER</a></li>
+        <li><a href="#">DISCORD</a></li>
+        <li><a href="#">REDDIT</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>MORE DETAILS</h3>
+      <p>CONTACT US AT <a href="mailto:samsotoo238@gmail.com">harmony@gmail.com</a></p>
+      <a href="#" class="brand-book-button">DOWNLOAD BOOK</a>
+    </div>
+  </footer>
+  
 </body>
 </html>

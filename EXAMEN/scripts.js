@@ -111,3 +111,4 @@ function animation() {
 // Inicializar el carrusel
 updateCarousel();
 startAutoRotate(); // Iniciar la auto-rotación al cargar la página
+

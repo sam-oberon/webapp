@@ -52,7 +52,7 @@ header {
 }
 
 .menu a:hover {
-    color: #ffe946;
+    color: #ffae68;
 }
 
 
@@ -194,7 +194,7 @@ header {
     position: absolute;
     bottom: 20%;
     left: 10%;
-    max-width: 600px;
+    max-width: 590px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     z-index: 2; /* Asegura que el texto esté encima de las líneas */
 }
@@ -295,7 +295,7 @@ header {
 }
 
 .menu-dropdown a:hover {
-    color: #6bbfd0;
+    color: #ffae68;
 }
 
 /* Responsive Design */
@@ -338,7 +338,7 @@ header {
 
 .footer-section h3 {
   font-size: 18px;
-  color: #6bbfd0; /* Verde fantástico */
+  color: #ffae68; /* Verde fantástico */
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -366,7 +366,7 @@ header {
 }
 
 .footer-section ul li a:hover {
-  color: #6bbfd0; /* Cambia a verde al pasar el mouse */
+  color: #ffae68; /* Cambia a verde al pasar el mouse */
 }
 
 .brand-book-button {
@@ -391,7 +391,7 @@ header {
   
 
 .brand-book-button:hover {
-  background-color: #6bbfd0;
+  background-color: #ffae68;
   transform: translateY(-2px);
 }
 
