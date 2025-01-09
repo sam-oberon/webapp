@@ -1,2 +1,2 @@
 Esta es mi página y aquí puedes acceder al enlace de mi repositorio [https://sam-oberon.github.io/webapp/](https://sam-oberon.github.io/webapp/)
-Este es el enlace a mi práctica 1 [https://sam-oberon.github.io/webapp/someoutstandingwebs/index.html](https://sam-oberon.github.io/webapp/someoutstandingwebs/index.html)
+Este es el enlace a mi examen [https://sam-oberon.github.io/webapp/EXAMEN/index.html](https://sam-oberon.github.io/webapp/EXAMEN/index.html)
