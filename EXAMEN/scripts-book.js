@@ -5,14 +5,14 @@ function showSlide(index) {
     const totalSlides = slides.children.length;
 
     if (index < 0) {
-        currentIndex = totalSlides - 1; // Wrap around to last slide
+        currentIndex = totalSlides - 1; // ir de la última a la primera
     } else if (index >= totalSlides) {
-        currentIndex = 0; // Wrap around to first slide
+        currentIndex = 0;
     } else {
         currentIndex = index;
     }
 
-    const offset = -currentIndex * 100; // Calculate offset for the current slide
+    const offset = -currentIndex * 100;
     slides.style.transform = `translateX(${offset}%)`;
 }
 
@@ -24,5 +24,5 @@ function nextSlide() {
     showSlide(currentIndex + 1);
 }
 
-// Initialize the carousel
+// inicio carousel
 showSlide(currentIndex);

@@ -1,18 +1,18 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #ffffff;
     color: rgb(255, 255, 255);
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.189); /* Línea inferior */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.189);
     background-color: #0000001c;
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .menu a:hover {
-    color: #72c9ff;
+    color: #b574ff;
 }
 
 
@@ -70,7 +70,7 @@ header {
 }
 
 
-/* Hero Section */
+
 .hero {
     position: relative;
     height: 100vh;
@@ -88,19 +88,19 @@ header {
 }
 
 
-/* Add Decorative Lines */
+
 .hero::before {
     content: '';
-    position: fixed; /* Cambiar de absolute a fixed para que esté fijo en la pantalla */
-    background: rgba(255, 255, 255, 0.300); /* Línea semitransparente */
-    z-index: 999; /* Asegura que esté por encima de cualquier otro elemento */
-    width: 100vw; /* Asegura que la línea cubra todo el ancho de la ventana */
-    height: 100vh; /* Asegura que la línea cubra toda la altura de la ventana */
+    position: fixed;
+    background: rgba(255, 255, 255, 0.300);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
 }
 
-/* Línea vertical */
+
 .hero::before {
     width: 2px;
     height: 100%;
@@ -108,7 +108,7 @@ header {
     top: 0;
 }
 
-/* Línea horizontal */
+
 .hero::after {
     height: 2px;
     width: 100%;
@@ -120,9 +120,9 @@ header {
     position: absolute;
     bottom: 20%;
     left: 10%;
-    max-width: 550px;
+    max-width: 470px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2; /* Asegura que el texto esté encima de las líneas */
+    z-index: 2;
 }
 
 .hero-text h2 {
@@ -140,7 +140,7 @@ header {
     letter-spacing: 2px;
 }
 
-/* Hamburger Menu */
+
 .hamburger-menu {
     display: flex;
     cursor: pointer;
@@ -162,17 +162,17 @@ header {
     position: absolute;
 }
 
-/* First stripe */
+
 .hamburger-menu span:first-child {
     top: 0;
 }
 
-/* Second stripe */
+
 .hamburger-menu span:last-child {
     bottom: 0;
 }
 
-/* Animation for open state */
+
 .hamburger-menu.open span:first-child {
     transform: translateY(9px) rotate(45deg);
 }
@@ -181,24 +181,24 @@ header {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Menu Dropdown */
+
 .menu-dropdown {
     display: none;
     position: fixed;
     top: 0;
-    right: -100%; /* El menú comienza fuera de la pantalla desde la derecha */
-    width: 20%; /* El menú ocupa el 60% del ancho de la pantalla */
+    right: -100%;
+    width: 20%;
     height: 100%;
     background: rgba(0, 0, 0, 0.54);
     z-index: 15;
     padding: 30px;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease; /* Animación para el deslizamiento */
+    transition: right 0.3s ease;
 }
 
 .menu-dropdown.open {
     display: block;
-    right: 0; /* El menú se despliega al llegar a la pantalla */
+    right: 0;
 }
 
 .menu-dropdown ul {
@@ -210,7 +210,7 @@ header {
 
 .menu-dropdown li {
     margin-bottom: 25px;
-    text-align: right; /* Alineamos el texto a la derecha para una mejor apariencia */
+    text-align: right;
 }
 
 .menu-dropdown a {
@@ -221,10 +221,10 @@ header {
 }
 
 .menu-dropdown a:hover {
-    color: #72c9ff;
+    color: #b574ff;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -256,14 +256,14 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1px; /* Ancho de la raya separadora */
+    width: 1px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.614); /* Color semitransparente */
+    background-color: rgba(255, 255, 255, 0.614);
   }
 
 .footer-section h3 {
   font-size: 18px;
-  color: #72c9ff; /* Verde fantástico */
+  color: #b574ff;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -291,7 +291,7 @@ header {
 }
 
 .footer-section ul li a:hover {
-  color: #72c9ff; /* Cambia a verde al pasar el mouse */
+  color: #b574ff;
 }
 
 .brand-book-button {
@@ -304,19 +304,19 @@ header {
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
-    border: 1px solid #ffffff; /* Reborde blanco */
+    border: 1px solid #ffffff;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .brand-book-button:hover {
-    background-color: #ffffff; /* Fondo blanco al pasar el mouse */
-    color: #000; /* Texto negro al pasar el mouse */
-    transform: translateY(-2px); /* Efecto de elevar el botón */
+    background-color: #ffffff;
+    color: #000;
+    transform: translateY(-2px);
   }
   
 
 .brand-book-button:hover {
-  background-color: #5cc1ff;
+  background-color: #b574ff;
   transform: translateY(-2px);
 }
 
@@ -329,122 +329,58 @@ header {
   text-decoration: underline;
 }
 
-/* Sección principal */
-.artist-section {
-    padding-top: 60px;
-    padding-left: 82px;
+.carousel-section {
     background-color: #000000;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Línea horizontal */
-.horizontal-line {
-    border: 1.6px solid #ffffff43;
-    width: 100%;
-}
-
-/* Texto principal */
-.text-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    margin-bottom: 40px;
-    margin-top: 40px;
-}
-
-.section-title {
-    margin: 0;
-    font-size: 30px;
-    max-width: 80%;
-    text-align: center;
-}
-
-/* Contenedor de imágenes */
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
-    padding-bottom: 60px;
-}
-
-/* Tarjetas de imágenes */
-.image-card {
-    width: 50px;
-    height: 100px;
+.carousel-container {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Títulos de las imágenes */
-.image-title {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    text-shadow: 0 1.5px 1.5px #0000007d;
-}
-
-/* Contenedor de las imágenes */
-.image-card {
-    width: 250px;
-    height: 250px;
-    margin: 20px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 70%;
+    max-width: 1100px;
     overflow: hidden;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
-/* Título centrado dentro de la imagen */
-.image-card .image-title {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    z-index: 2;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Efectos al pasar el ratón */
-.image-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.image-card:hover .image-title {
-    transform: translateY(-10px);
-    opacity: 1;
-}
-
-/* Efecto de superposición */
-.image-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.carousel-image {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-    z-index: 1;
+    flex-shrink: 0;
+    border-radius: 10px;
 }
 
-.image-card:hover::before {
-    background-color: rgba(0, 0, 0, 0.6);
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
 }

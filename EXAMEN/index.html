@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HARMONY</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <link rel="icon" type="image/svg+xml" href="./archivos/LOGONOTA.png" />
+    <link rel="shortcut icon" href="./archivos/LOGONOTA.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./archivos/LOGONOTA.png" />
+    <meta name="apple-mobile-web-app-title" content="HARMONY'S OFFICIAL PAGE" />
 </head>
 <body>
     <header>
@@ -43,24 +48,24 @@
             </div>
         </section>
 
-        <section style="padding-top: 30px; padding-bottom: 40px; background-color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <section style="padding-top: 30px; padding-bottom: 80px; background-color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
 
             <div class="section-divider-horizontal-start"></div>
 
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <!-- Título alineado a la izquierda -->
+              
               <h1 style="font-size: 35px; color: #ffffff; margin: 0; padding-left: 180px;">FACTIONS...RULERS OF THIS WORLD</h1>
               
-              <!-- Línea separadora vertical -->
+              
               <div class="section-divider-vertical"></div>
 
-              <!-- Texto alineado a la derecha -->
+              
               <p style="font-size: 1rem; color: #ffffff; max-width: 25%; text-align: center; margin-right: 100px;">
-                Cada tarjeta representa una pieza única de nuestra colección digital, diseñada con cuidado y creatividad. Descubre el arte y la visión detrás de cada una.
+                None like the other, the different factions or regions of this world define and visually embody a very specific genre of sounds and history, each one standing out for its unique cultures, architecture, society...
               </p>
             </div>
 
-            <!-- Línea separadora horizontal -->
+
             <div class="section-divider-horizontal"></div>
 
         <div class="carousel-container">
@@ -93,24 +98,55 @@
         </div>
             <script src="scripts.js"></script>
           </section>
-          
+
+          <section style="background-color: #000000; position: relative;">
+            <img src="archivos/LANDMARKS.jpg" alt="Background Image" class="background-image">
+            
+            <div class="centered-text">
+                <p>A BOOK THAT KNOWS NO LIMITS NOR RESTRICTIONS</p>
+            </div>
+          </section>
+
+          <section style="background-color: #000000; padding: 60px 60px; display: flex; flex-direction: column; gap: 40px;">
+            
+            <div class="image-row">
+                <img src="archivos/PÁGINA5.png" alt="Imagen 1" class="image-left">
+            </div>
+        
+            
+            <div class="image-row">
+                <img src="archivos/PÁGINA6.png" alt="Imagen 2" class="image-right">
+            </div>
+        
+            
+            <div class="image-row">
+                <img src="archivos/PÁGINA7.png" alt="Imagen 3" class="image-left">
+            </div>
+        
+            
+            <div class="image-row">
+                <img src="archivos/PÁGINA4.png" alt="Imagen 4" class="image-right">
+            </div>
+        </section>
+        
+        
     </main>
 
     <script>
-// Seleccionamos los elementos necesarios
+
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menuDropdown = document.querySelector('.menu-dropdown');
 
-// Abrir y cerrar el menú al hacer clic en el icono de la hamburguesa
+
 hamburgerMenu.addEventListener('click', (e) => {
-    e.stopPropagation();  // Evita que el clic se propague y cierre el menú
+    e.stopPropagation(); 
     hamburgerMenu.classList.toggle('open');
     menuDropdown.classList.toggle('open');
 });
 
-// Cerrar el menú si se hace clic fuera de él
+
 document.addEventListener('click', (e) => {
-    // Verificamos si el clic no fue sobre el menú ni sobre el botón de hamburguesa
+    
     if (!menuDropdown.contains(e.target) && !hamburgerMenu.contains(e.target)) {
         menuDropdown.classList.remove('open');
         hamburgerMenu.classList.remove('open');
@@ -121,9 +157,8 @@ document.addEventListener('click', (e) => {
 
 <footer class="fantasy-footer">
     <div class="footer-section">
-      <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
+      <p>// ALL RIGHTS<br>RESERVED</p>
       <ul>
-        <li>KAI_53815.JPG</li>
         <li>AUDIO_LOG_2018116.WAV</li>
       </ul>
     </div>

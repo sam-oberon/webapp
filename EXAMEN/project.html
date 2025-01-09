@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="project-styles.css">
+    <title>HARMONY</title>
+    <link rel="stylesheet" href="CSS/project-styles.css">
+
+    <link rel="icon" type="image/svg+xml" href="./archivos/LOGONOTA.png" />
+    <link rel="shortcut icon" href="./archivos/LOGONOTA.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./archivos/LOGONOTA.png" />
+    <meta name="apple-mobile-web-app-title" content="HARMONY'S OFFICIAL PAGE" />
 </head>
 <body>
     <header>
@@ -44,21 +49,21 @@
         </section>
 
         <section style="padding-top: 60px; padding-left: 82px; background-color: #000000; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-            <!-- Línea horizontal -->
+            
             <hr style="border: 1.6px solid #ffffff43; width: 100%;">
         
             <div style="display: flex; align-items: center; color: #ffffff; position: relative;">
-                <!-- Imagen con bordes redondeados -->
+                
                 <img src="archivos/ABOUTME.png" alt="Descripción de la imagen" style="width: 500px; height: 550px; border-radius: 10%; margin-top: 60px; margin-bottom: 60px; margin-left: 100px; margin-right: 100px;">
         
-                <!-- Línea vertical -->
+                
                 <div style="width: 4px; background-color: #ffffff43; height: 700px; margin-right: 100px;"></div>
         
-                <!-- Texto con título y cuerpo -->
+                
                 <div>
                     <h2 style="margin: 0; font-size: 40px; max-width: 60%;">MEET THE ARTIST BEHIND THE PROJECT</h2>
                     <p style="margin: 20px 0 0; font-size: 16px; line-height: 1.5; max-width: 35%;">
-                        Este es el cuerpo del texto que acompaña a la imagen. Aquí puedes colocar cualquier descripción o contenido relacionado con la imagen. Es perfecto para destacar información importante de una manera elegante y profesional.
+                        Hi there! I'm Sam, an art student and professional illustrator and graphic designer based in spain. <br><br> This project is born from my burning passion for music and its diversity, and how it comes all together in our present time.
                     </p>
                 </div>
             </div>
@@ -68,20 +73,20 @@
     </main>
 
     <script>
-// Seleccionamos los elementos necesarios
+
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menuDropdown = document.querySelector('.menu-dropdown');
 
-// Abrir y cerrar el menú al hacer clic en el icono de la hamburguesa
+
 hamburgerMenu.addEventListener('click', (e) => {
-    e.stopPropagation();  // Evita que el clic se propague y cierre el menú
+    e.stopPropagation();
     hamburgerMenu.classList.toggle('open');
     menuDropdown.classList.toggle('open');
 });
 
-// Cerrar el menú si se hace clic fuera de él
+
 document.addEventListener('click', (e) => {
-    // Verificamos si el clic no fue sobre el menú ni sobre el botón de hamburguesa
+    
     if (!menuDropdown.contains(e.target) && !hamburgerMenu.contains(e.target)) {
         menuDropdown.classList.remove('open');
         hamburgerMenu.classList.remove('open');
@@ -92,9 +97,8 @@ document.addEventListener('click', (e) => {
 
 <footer class="fantasy-footer">
     <div class="footer-section">
-      <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
+        <p>// ALL RIGHTS<br>RESERVED</p>
       <ul>
-        <li>KAI_53815.JPG</li>
         <li>AUDIO_LOG_2018116.WAV</li>
       </ul>
     </div>

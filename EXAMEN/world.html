@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="world-styles.css">
+    <title>HARMONY</title>
+    <link rel="stylesheet" href="CSS/world-styles.css">
+
+    <link rel="icon" type="image/svg+xml" href="./archivos/LOGONOTA.png" />
+    <link rel="shortcut icon" href="./archivos/LOGONOTA.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./archivos/LOGONOTA.png" />
+    <meta name="apple-mobile-web-app-title" content="HARMONY'S OFFICIAL PAGE" />
 </head>
 <body>
     <header>
@@ -44,20 +49,20 @@
         </section>
 
         <section class="artist-section">
-            <!-- Línea horizontal -->
+            
             <hr class="horizontal-line">
         
-            <!-- Texto principal centrado -->
+            
             <div class="text-center">
                 <h2 class="section-title">DIVE DEEPER INTO THE WORLD OF HARMONY</h2>
             </div>
         
-            <!-- Línea horizontal -->
+            
             <hr class="horizontal-line">
 
-            <!-- Contenedor de imágenes -->
+            
             <div class="image-grid">
-                <!-- Primera fila -->
+                
                 <div class="image-card" style="background-image: url('archivos/SOCIETY.jpg');">
                     <span class="image-title">SOCIETY</span>
                 </div>
@@ -69,7 +74,7 @@
                 </div>
         
 
-                <!-- Segunda fila -->
+                
                 <div class="image-card" style="background-image: url('archivos/BIOMES.jpg');">
                     <span class="image-title">BIOMES</span>
                 </div>
@@ -80,7 +85,7 @@
                     <span class="image-title">TRADITIONS</span>
                 </div>
 
-                <!-- Tercera fila -->
+                
                 <div class="image-card" style="background-image: url('archivos/FAUNA.jpg');">
                     <span class="image-title">FAUNA</span>
                 </div>
@@ -95,20 +100,20 @@
     </main>
 
     <script>
-// Seleccionamos los elementos necesarios
+
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menuDropdown = document.querySelector('.menu-dropdown');
 
-// Abrir y cerrar el menú al hacer clic en el icono de la hamburguesa
+
 hamburgerMenu.addEventListener('click', (e) => {
-    e.stopPropagation();  // Evita que el clic se propague y cierre el menú
+    e.stopPropagation();
     hamburgerMenu.classList.toggle('open');
     menuDropdown.classList.toggle('open');
 });
 
-// Cerrar el menú si se hace clic fuera de él
+
 document.addEventListener('click', (e) => {
-    // Verificamos si el clic no fue sobre el menú ni sobre el botón de hamburguesa
+    
     if (!menuDropdown.contains(e.target) && !hamburgerMenu.contains(e.target)) {
         menuDropdown.classList.remove('open');
         hamburgerMenu.classList.remove('open');
@@ -119,9 +124,8 @@ document.addEventListener('click', (e) => {
 
 <footer class="fantasy-footer">
     <div class="footer-section">
-      <p>// INITIALIZING<br>NEW FILES IN DATABASE</p>
+      <p>// ALL RIGHTS<br>RESERVED</p>
       <ul>
-        <li>KAI_53815.JPG</li>
         <li>AUDIO_LOG_2018116.WAV</li>
       </ul>
     </div>
